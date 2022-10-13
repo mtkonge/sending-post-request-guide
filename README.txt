@@ -16,3 +16,15 @@ Opgaven:
     Opgaven er at sende en request til "api/createpost" med dataen fra inputtet.
     Held og lykke :)
 
+Post request:
+    En post request ser sådan ud:
+        await fetch(url, {data, headers, method});
+
+    Et eksempel til en post request ville være:
+        const data = {message: "Hello!"}; // Definere et object
+        const dataJson = JSON.stringify(data); //Laver objectet om til json 
+        const headers = new Headers(); // Definere headers
+        headers.append("Content-Type", "application/json"); // Tilføjer {"Content-Type", "application/json} hvilket fortæller at post requesten bliver sendt med json
+        await fetch("eksempelurl", {data, headers "POST"}); // Sender post requesten
+    
+
