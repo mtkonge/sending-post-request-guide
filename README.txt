@@ -22,9 +22,9 @@ Post request:
 
     Et eksempel til en post request ville være:
         const data = {message: "Hello!"}; // Definere et object
-        const dataJson = JSON.stringify(data); //Laver objectet om til json 
+        const body = JSON.stringify(data); //Laver objectet om til json 
         const headers = new Headers(); // Definere headers
         headers.append("Content-Type", "application/json"); // Tilføjer {"Content-Type", "application/json} hvilket fortæller at post requesten bliver sendt med json
-        await fetch("eksempelurl", {data, headers "POST"}); // Sender post requesten
+        const method = "POST";
+        await fetch("eksempelurl", {body, headers, method}); // Sender post requesten
     
-
